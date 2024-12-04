@@ -20,14 +20,20 @@ CREATE TABLE news(
     FOREIGN KEY (category_id) REFERENCES categrories(id)
 );   
 
-insert into users (id, username, PASSWORD,role) VALUES (1,'Brittney Brooksbank', 'qM3&Bu$ID>ZJAnJT',0);
-insert into users (id, username, PASSWORD,role) values (2, 'Currey Bleythin', 'iN4$v@9R*wLS@5',0);
-insert into users (id, username, PASSWORD,role) values (3, 'Wat Sayles', 'dV5"bT_w#',0);
-insert into users (id, username, PASSWORD,role) values (4, 'Kathrine Grishakin', 'sX4*4k47E1e4N?<',0);
-insert into users (id, username, PASSWORD,role) values (5, 'Romy Dauby', 'tQ1,BuHx3_R@q',0);
-insert into users (id, username, PASSWORD,role) values (6, 'Haskel Mechan', 'cX0*4~}z',0);
-insert into users (id, username, PASSWORD,role) VALUES (7, 'admin', 'admin',1);
-insert into users (id, username, PASSWORD,role) VALUES (8, 'sang', '1234',1);
+insert into users (id, username, PASSWORD,role) VALUES (1, 'admin', 'admin',1);
+insert into users (id, username, PASSWORD,role) VALUES (2, 'sang', '1234',1);
+insert into users (id, username, PASSWORD,role) VALUES (3, 'an', '1234',0);
+insert into users (id, username, PASSWORD,role) VALUES (4, 'luat', '1234',0);
+
+INSERT INTO categrories (id , NAME) VALUES (1, 'Thể Thao');
+INSERT INTO categrories (id , NAME) VALUES (2, 'Chính Trị');
+INSERT INTO categrories (id , NAME) VALUES (3, 'Nghệ Thuật');
+INSERT INTO categrories (id , NAME) VALUES (4, 'Học Tập');
+
+INSERT INTO news(id,title,content,image,create_at,category_id) VALUES(1,'V-League 2024: Kịch Tính Đỉnh Cao Giữa Hai Đội Đầu Bảng' , 'Vòng đấu thứ 15 của V-League 2024 đã khép lại với trận cầu kinh điển giữa đội tuyển Hà Nội FC và Hoàng Anh Gia Lai. Cả hai đội nhập cuộc đầy quyết tâm, tạo nên một màn trình diễn hấp dẫn trên sân vận động Mỹ Đình.
+Với chiến thuật linh hoạt, Hà Nội FC đã mở tỷ số ở phút thứ 25 nhờ pha lập công đẹp mắt của Nguyễn Văn Quyết. Tuy nhiên, Hoàng Anh Gia Lai không hề dễ dàng bỏ cuộc khi Minh Vương ghi bàn gỡ hòa ở hiệp hai.
+Trận đấu kết thúc với tỷ số hòa 1-1, giữ vững vị trí đầu bảng cho Hà Nội FC nhưng cũng khiến Hoàng Anh Gia Lai tiến sát ngôi vị thứ hai. V-League đang trở nên hấp dẫn hơn bao giờ hết khi các đội bóng cạnh tranh quyết liệt cho ngôi vô địch năm nay','./hoadep/haiduong.jpg','2024-10-26',1)
+
 
 
 

@@ -1,12 +1,12 @@
 create table users (
-	id INT PRIMARY KEY AUTO_INCREMENTER,
+	id INT  AUTO_INCREMENT PRIMARY KEY,
 	username VARCHAR(255),
 	password VARCHAR(255),
 	role INT CHECK (role IN (0, 1))
 );
 
 CREATE TABLE categrories(
-    id  INT PRIMARY KEY AUTO_INCREMENTER,
+    id  INT  AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
  
@@ -15,9 +15,9 @@ CREATE TABLE news(
     title VARCHAR(255) NOT NULL,       
     content TEXT,                      
     image VARCHAR(255),                
-    create_at Date 
+    create_at DATE, 
     category_id INT,                  
-    CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES categories(id)
+    FOREIGN KEY (category_id) REFERENCES categrories(id)
 );   
 
 insert into users (id, username, PASSWORD,role) VALUES (1,'Brittney Brooksbank', 'qM3&Bu$ID>ZJAnJT',0);

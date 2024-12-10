@@ -24,6 +24,7 @@ insert into users (id, username, PASSWORD,role) VALUES (1, 'admin', 'admin',1);
 insert into users (id, username, PASSWORD,role) VALUES (2, 'sang', '1234',1);
 insert into users (id, username, PASSWORD,role) VALUES (3, 'an', '1234',0);
 insert into users (id, username, PASSWORD,role) VALUES (4, 'luat', '1234',0);
+insert into users (username, PASSWORD,role) VALUES ('user', '1234',0);
 
 INSERT INTO categrories (id , NAME) VALUES (1, 'Thể Thao');
 INSERT INTO categrories (id , NAME) VALUES (2, 'Chính Trị');
@@ -35,6 +36,11 @@ Với chiến thuật linh hoạt, Hà Nội FC đã mở tỷ số ở phút th
 Trận đấu kết thúc với tỷ số hòa 1-1, giữ vững vị trí đầu bảng cho Hà Nội FC nhưng cũng khiến Hoàng Anh Gia Lai tiến sát ngôi vị thứ hai. V-League đang trở nên hấp dẫn hơn bao giờ hết khi các đội bóng cạnh tranh quyết liệt cho ngôi vô địch năm nay','./hoadep/haiduong.jpg','2024-10-26',1)
 
 
-
-
-
+SELECT 
+	username , 
+	password , 
+	case role
+		when 1 then N'admin'
+		when 0 then N'nguoi dung' 
+	END AS role
+ FROM users

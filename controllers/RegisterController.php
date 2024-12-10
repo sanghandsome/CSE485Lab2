@@ -1,10 +1,8 @@
 <?php
     session_start();
-    include_once(__DIR__ . '/../models/User.php');
-    $user = new User($_POST["username"], $_POST["password"],0);
-    $username = $user->getUsername();
-    $password = $user->getPassword();
-    $role = $user->getRole();
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $role = 0;
     require(__DIR__ . '/../configs/connection.php');
     $sql_select = "SELECT * FROM users WHERE username = :username";
     $stmt_select = $conn->prepare($sql_select);
